@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './Theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Portafolio';
+  
+  constructor(private themeService: ThemeService) {}
+
+  ngOnInit() {
+    const theme = this.themeService.getTheme();
+    document.body.classList.add(theme);
+  }
 }

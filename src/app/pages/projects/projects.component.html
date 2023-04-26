@@ -1,3 +1,20 @@
-<p>
-  projects works!
-</p>
+<div style="margin: 50px;" id="project">
+  <div class="title">
+    <span style="font-weight: bold;">Proyectos</span>
+  </div>
+  <div class="project-container">
+    <div class="project row">
+      <div class="project-item bg-card-project" *ngFor="let data of listProjects">
+        <img src="../../../assets/img/project/{{data.src}}" alt="">
+        <div class="row project-btns">
+          <div class="btn-project" >
+            <a href="{{data.demo}}" target="_blank">DEMO</a>
+          </div>
+          <div class="btn-project">
+            <a href="{{data.github}}" target="_blank">GITHUB</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
