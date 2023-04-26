@@ -2,31 +2,28 @@
   <div class="navBar-name">
     <strong>Camila Maturano</strong>
   </div>
-  <div class="row navBar_items">
-    <div> 
-      <span>
-        Inicio
-      </span>
-    </div>
+  <div class="row" style="align-items: center;">
+    <nav style="margin-right: 10px;">
+      <ul>
+        <li>
+          <a href="#Index" class="link">Inicio</a>
+        </li>
+        <li>
+          <a href="#languages" class="link">Habilidades</a>
+        </li>
+        <li>
+          <a href="#project" class="link">Proyectos</a>
+        </li>
+        <li>
+          <a href="#form" class="link">Contacto</a>
+        </li>
+      </ul>
+    </nav>
     <div>
-      <span>
-        Acerca
-      </span>
-    </div>
-    <div>
-      <span>
-        Habilidades
-      </span>
-    </div>
-    <div>      
-      <span>
-        Proyectos
-      </span>
-    </div>
-    <div>
-      <span>
-        Contacto
-      </span>
+      <button class="switch" id="switch" (click)="toggleTheme()">
+        <span><i class="fa-solid fa-sun"></i></span>
+        <span><i class="fa-solid fa-moon"></i></span>
+      </button>
     </div>
   </div>
 </div>

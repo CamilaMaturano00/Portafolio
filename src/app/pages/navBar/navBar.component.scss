@@ -1,0 +1,104 @@
+.navBar{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(0, 0, 0, 0.5);
+    /* background-color: black; */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navBar-name{
+    color: #82E0AA;
+    margin-left: 30px;
+    font-size: 23px;
+    font-weight: 800;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.switch{
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    
+    &::after{
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #F1F1F1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+    }
+
+    &.active{
+        background: orange;
+        color: black;
+        &::after{
+           right: 0;
+           left: unset; 
+        }
+    }
+
+    span{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
+
+nav {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-size: 20px;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    scale: 0 1;
+    transform-origin: left;
+    transition: scale 0.25s;
+}
+
+.link:hover::before {
+    scale: 1;
+}
